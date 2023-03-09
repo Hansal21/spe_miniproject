@@ -1,0 +1,5 @@
+localhost ansible_user=hansal
+
+[group1]
+172.16.133.184  ansible_user=user1
+172.16.133.184  ansible_user=user2

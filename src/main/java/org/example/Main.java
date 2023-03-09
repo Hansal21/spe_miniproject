@@ -7,6 +7,13 @@ public class Main {
     public double sqrt(double x){
         return Math.sqrt(x);
     }
+    public Integer factorial(Integer num) {
+        Integer x=1;
+        for(int i=1;i<=num;i++){
+            x=i*x;
+        }
+        return x;
+    }
     public static void main(String[] args) {
         Main main=new Main();
         Scanner sc=new Scanner(System.in);
@@ -23,6 +30,9 @@ public class Main {
                 System.out.println("Square root of "+num+" is "+main.sqrt(num));
                 break;
             case 2:
+                System.out.print("Enter Number:");
+                Integer x=sc.nextInt();
+                System.out.println(main.factorial(x));
                 break;
             case 3:
                 break;

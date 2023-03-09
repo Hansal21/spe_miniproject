@@ -7,6 +7,9 @@ public class Main {
     public double sqrt(double x){
         return Math.sqrt(x);
     }
+    public double log(double x){
+        return Math.log(x);
+    }
     public Integer factorial(Integer num) {
         Integer x=1;
         for(int i=1;i<=num;i++){
@@ -35,6 +38,9 @@ public class Main {
                 System.out.println(main.factorial(x));
                 break;
             case 3:
+                System.out.print("Enter Number:");
+                num=sc.nextDouble();
+                System.out.println(main.log(num));
                 break;
             case 4:
                 break;

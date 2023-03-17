@@ -1,4 +1,4 @@
 FROM openjdk
-COPY ./target/MIniProject-1.0-SNAPSHOT.jar ./
+COPY ./target/MIniProject-1.0-SNAPSHOT-jar-with-dependencies.jar ./
 WORKDIR ./
-CMD ["java","-cp","MIniProject-1.0-SNAPSHOT.jar","org/example/Main"]
+CMD ["java","-jar","MIniProject-1.0-SNAPSHOT-jar-with-dependencies.jar"]

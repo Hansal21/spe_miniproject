@@ -6,5 +6,3 @@
       docker_image:
         name: hansal21/miniproject
         source: pull
-    - name: creating container
-      shell: docker run -it -d --name mycontainer hansal21/miniproject:latest

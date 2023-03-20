@@ -35,11 +35,11 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         boolean flag=true;
         while(flag==true) {
-            System.out.println();
-            System.out.println("1.Square root function - √x");
+        System.out.println();
+        System.out.println("1.Square root function - √x");
         System.out.println("2.Factorial function - x!");
         System.out.println("3.Natural logarithm (base е) - ln(x)");
-        System.out.println("4.Power function - xb");
+        System.out.println("4.Power function - x^b");
         System.out.println("5.Exit");
         System.out.print("Enter your choice:");
         int choice=sc.nextInt();
@@ -47,17 +47,32 @@ public class Main {
                 case 1:
                     System.out.print("Enter Number:");
                     Double num = sc.nextDouble();
+                    if(num<0){
+                        System.out.println("Please Enter Positive Number");
+                        logger.error("Entered Negative Number for calculating square root");
+                    }
+                    else
                     System.out.println("Square root of " + num + " is " + main.sqrt(num));
                     break;
                 case 2:
                     System.out.print("Enter Number:");
                     Integer x = sc.nextInt();
-                    System.out.println("Factorial of " + x + " is " + main.factorial(x));
+                    if(x<0){
+                        System.out.println("Please Enter Positive Number");
+                        logger.error("Entered Negative Number for calculating factorial");
+                    }
+                    else
+                        System.out.println("Factorial of " + x + " is " + main.factorial(x));
                     break;
                 case 3:
                     System.out.print("Enter Number:");
                     num = sc.nextDouble();
-                    System.out.println("Natural Log of " + num + " is " + main.log(num));
+                    if(num<=0){
+                        System.out.println("Please Enter Positive Number");
+                        logger.error("Entered Negative Number for calculating log");
+                    }
+                    else
+                        System.out.println("Natural Log of " + num + " is " + main.log(num));
                     break;
                 case 4:
                     System.out.print("Enter base Number:");

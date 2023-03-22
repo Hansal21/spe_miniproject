@@ -1,2 +1,2 @@
 # spe_miniproject
-Calculator
+Calculator DevOps
